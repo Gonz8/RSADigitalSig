@@ -1,3 +1,6 @@
+/**
+ * Created by Dominik on 2016-05-02.
+ */
 import sun.security.jca.JCAUtil;
 
 import javax.crypto.BadPaddingException;
@@ -9,9 +12,6 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.*;
 
-/**
- * Created by Dominik on 2016-05-03.
- */
 public class RSAEngine {
 
     public static byte[] crypt(byte s[], RSAPublicKey key)

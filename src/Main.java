@@ -4,23 +4,15 @@
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
-//import java.security.Signature;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 import javafx.application.Application;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.ScatterChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -47,14 +39,13 @@ public class Main extends Application {
     RSADS sig;
 
 
-
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("RSA Digital Signature");
+        primaryStage.setTitle("RSA Digital Signature (MD5withRSA)");
         sig = new RSADS();
         stage = primaryStage;
         border = new BorderPane();
@@ -106,7 +97,7 @@ public class Main extends Application {
             }
         });
 
-        hbox.getChildren().addAll(signBtn, verifyBtn); //after coma put another objects
+        hbox.getChildren().addAll(signBtn, verifyBtn);
 
         return hbox;
     }
